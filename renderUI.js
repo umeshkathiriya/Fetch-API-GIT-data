@@ -28,11 +28,11 @@ export const renderUserData = (userData)=>{
 				</div>
 				<div class="col-md-6">
 					<div class="card-body">
-						<h5 class="card-title">${name === undefined?'No name available.':name}</h5>
-						<p class="card-text">${bio === undefined?'No bio added.':bio}</p>
-						<p class="card-text"><small class="text-muted"><b>Location:</b> ${location === undefined?'Not enter.':location}</small></p>
-						<p class="card-text"><small class="text-muted"><b>Followers:</b> ${followers === undefined?'No followers.':followers}</small></p>
-						<p class="card-text"><small class="text-muted"><b>Following:</b> ${following === undefined?'No followers.':following}</small></p>
+						<h5 class="card-title">${name === null?'No name available.':name}</h5>
+						<p class="card-text">${bio === null?'No bio added.':bio}</p>
+						<p class="card-text"><small class="text-muted"><b>Location:</b> ${location === null	?'Not enter.':location}</small></p>
+						<p class="card-text"><small class="text-muted"><b>Followers:</b> ${followers === null?'No followers.':followers}</small></p>
+						<p class="card-text"><small class="text-muted"><b>Following:</b> ${following === null?'No followers.':following}</small></p>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -44,10 +44,14 @@ export const renderUserData = (userData)=>{
 }
 
 export const renderSelectYear = (years)=>{
-	yearSelect.innerHTML = "<option value='Show All'>Show All</option>";
+	resetYear();
 	const minYear = Math.min(...years);
 	const currentYear = new Date().getFullYear();
 	for(let y=currentYear; y>=minYear; y--){
 		yearSelect.insertAdjacentHTML("beforeend",`<option value="${y}">${y}</option>`);
 	}
+}
+
+export const resetYear = ()=>{
+	yearSelect.innerHTML = "<option value='Show All'>Show All</option>";
 }

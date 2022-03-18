@@ -1,9 +1,8 @@
-import { fetchData, getButton, gitDataList } from "./fetchDetails.js";
+import { fetchData, getButton, gitDataList, userInput } from "./fetchDetails.js";
 import {renderRepo, yearSelect} from "./renderUI.js";
 
 const userInfo = document.querySelector("#userInfo");
 const userList = document.querySelector("#userList");
-const userInput = document.querySelector("#userName");
 const btnLoader = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`;
 const pageLoader = `<div class="text-center p-5"><div class="spinner-border" role="status"></div><div class="pt-3"><strong>Loading...</strong></div></div>`;
 

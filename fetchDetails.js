@@ -1,18 +1,21 @@
 import FetchWrapper from "./fetchWrapper.js";
-import {renderRepo, renderUserData, renderSelectYear, yearSelect} from "./renderUI.js";
+import {renderRepo, renderUserData, resetYear, renderSelectYear, yearSelect} from "./renderUI.js";
 import {renderChart, repoYearList} from './chartRender.js';
 
 const fetchAPI = new FetchWrapper("https://api.github.com");
 
 export const getButton = document.querySelector("#getApiBtn");
+export const userInput = document.querySelector("#userName");
 export let gitDataList = [];
 
 export const fetchData=(username)=>{
 	fetchAPI.get(`/users/${username}/repos`)
 	.then(data=>{
 		if(data.length === 0){
+			resetYear();
 			throw 'User yet not created any repository.'
 		}else if(data.message === 'Not Found'){
+			resetYear();
 			throw 'User Not Found';
 		}else{
 			gitDataList = data;

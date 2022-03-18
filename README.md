@@ -19,6 +19,7 @@ Bootstrap 5 used to do CSS styling and overall layouting.
 - Spread and Rest
 - Reduce
 - Promises
+- Closures
 - DOM manipulation
 
 ![Snap of Web UI](/GIT-DataUI.png "Snap of UI")
@@ -26,7 +27,7 @@ Bootstrap 5 used to do CSS styling and overall layouting.
 Check all js files to understand how to frame a step by step small app creation with code usecase and reuseability. 
 Filter the list(already fetch data) by selecting the year and update list of commits in a particular year.
 
-Handel most common errors with appropriate messages when API didn't fetch any user info and repository not created in any particular year.
+Handel most common errors with appropriate messages when API didn't fetch any user info and repository not created in any particular year. Even though user created and not enter any user details! such scenario should be replaced with valid labels and warning message.
 
 ![Snap of Error Handeling](/error_handeling.png "Snap of Error Handeling")
 
