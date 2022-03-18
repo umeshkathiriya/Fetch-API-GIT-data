@@ -26,4 +26,10 @@ Bootstrap 5 used to do CSS styling and overall layouting.
 Check all js files to understand how to frame a step by step small app creation with code usecase and reuseability. 
 Filter the list(already fetch data) by selecting the year and update list of commits in a particular year.
 
+Handel most common errors with appropriate messages when API didn't fetch any user info and repository not created in any particular year.
+
+![Snap of Error Handeling](/error_handeling.png "Snap of Error Handeling")
+
 Download files and learn! do your self practise. Happy to help, understand any feature and best code practices.
+
+**NOTE**: Although GIT API service is free and limited to handle requests per hour so, don't overload the server with request while working and testing. IP will be restricted as per terms of use.
