@@ -9,11 +9,10 @@ Bootstrap 5 used to do CSS styling and overall layouting.
 ## Javascript ES features used
 - Let Const Keywords
 - Template Literals
-- Multi-line Strings
 - Arrow Functions
 - Classes
 - Modules
-- Import Export
+- Nullish coalescing operator
 - Destructuring Assignment
 - Object Literals
 - Spread and Rest

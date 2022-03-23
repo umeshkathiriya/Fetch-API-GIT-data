@@ -28,11 +28,11 @@ export const renderUserData = (userData)=>{
 				</div>
 				<div class="col-md-6">
 					<div class="card-body">
-						<h5 class="card-title">${name === null?'No name available.':name}</h5>
-						<p class="card-text">${bio === null?'No bio added.':bio}</p>
-						<p class="card-text"><small class="text-muted"><b>Location:</b> ${location === null	?'Not enter.':location}</small></p>
-						<p class="card-text"><small class="text-muted"><b>Followers:</b> ${followers === null?'No followers.':followers}</small></p>
-						<p class="card-text"><small class="text-muted"><b>Following:</b> ${following === null?'No followers.':following}</small></p>
+						<h5 class="card-title">${name ?? 'No name available.'}</h5>
+						<p class="card-text">${bio ?? 'No bio added.'}</p>
+						<p class="card-text"><small class="text-muted"><b>Location:</b> ${location ?? 'Not enter.'}</small></p>
+						<p class="card-text"><small class="text-muted"><b>Followers:</b> ${followers ?? 'No followers.'}</small></p>
+						<p class="card-text"><small class="text-muted"><b>Following:</b> ${following ?? 'No followers.'}</small></p>
 					</div>
 				</div>
 				<div class="col-md-4">
